@@ -19,18 +19,18 @@ sayMyNAme()        //calling the functions
         E
         S
         H
-    */    
+*/    
 
 // function addTwoNumbers(number1, number2)    //took two parameters , jiska dtatype btane ki jarurat nhi hai
 // {
-//     console.log(number1+number2)
+//     console.log(number1+number2)  
 // }
 function addTwoNumbers(number1, number2) 
 {
     return number1+number2
 }
-
-addTwoNumbers(3, 4) //NaN (Not a number) if argument not given in function call , O/P 7 in new line
+//addTwoNumbers() // NaN as not given any argument
+addTwoNumbers(3, 4) // O/P 7 in new line
 
 addTwoNumbers(3,"4") // here 4 taken as string , o/p 34
 
@@ -39,7 +39,7 @@ addTwoNumbers(3,null)//3
 const result = addTwoNumbers(3,5) //8
 
 
-// console.log("result : ",result);  // o/p: result :  undefined
+ console.log("result : ",result);  // result :  8
  
 function loginusermessage(username)   //here we can give name to username="sam" , so that it never go to the if block , sending arguments from there will overright sam
 {
@@ -52,7 +52,7 @@ function loginusermessage(username)   //here we can give name to username="sam" 
     // 
 }
 
-//console.log(loginusermessage("adarsh")) //adarsh just logged in // agr console .log nhi lgaya hota to koooch print nhi hota
+//console.log(loginusermessage("adarsh")) //adarsh just logged in // agr console.log nhi lgaya hota to koooch print nhi hota
 //O/P when nothing is passed as argument It says undefined
 
 /*in projects : oftenly we encounter shopping cart where we dont

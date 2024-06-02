@@ -1,10 +1,10 @@
-const user = {
+const user = {                   // here 'user' is an object
     username : " Adarsh",
     price : 999,
 
     welcomeMessage: function()
     {
-        console.log(`${this.username}, welcome to website`)  //need to refer to the current context 
+        console.log(`${this.username}, welcome to website`)  //this keyword refers to the current context 
     }
 
 
@@ -17,7 +17,7 @@ console.log(this); // O/P : {} , coz there is no global context before this line
 
 // function chai(){
 //     let username= " Adarsh"
-//     console.log(this).username;  //o/p : undefined
+//     console.log(this.username);  //o/p : undefined as 'this' keyword works in only object
 // }
 
 // chai() //O/P : undefined
@@ -34,6 +34,7 @@ console.log(this); // O/P : {} , coz there is no global context before this line
 const chai =  () =>{
      let username = "Adarsh"
    console.log(this); 
+//    console.log(this.username); //undefined 
 }  
 chai() // O/p : {} as the this keyword try to acces the global context of any object
                 //   jo ki hai nhi to ye {} aise aa rha hai
@@ -45,9 +46,9 @@ chai() // O/p : {} as the this keyword try to acces the global context of any ob
 //     return num1 + num2
 // } //7
 
-// const addTwo = (num1, num2) => num1 + num2 
+// const addTwo = (num1, num2) => num1 + num2  one line function definition
 // const addTwo = (num1, num2) => (num1 + num2) //7 (this way also output the 7 , return can be ommited)
-console.log(addTwo(3,4));  //7
+//console.log(addTwo(3,4));  //7
 
 //analysis is this  
 /*  

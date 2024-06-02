@@ -14,10 +14,10 @@ if(true)
 
 // console.log(a); //eror as , a is only in if scope
 // console.log(b); //error as b is only in if scope
-//console.log(c);    //30 O/P c being var will overrule the scope
+//console.log(c);    //30 O/P c being var will overrule the scope //its not advisable to use var
 
 
-//its not advisable to use var
+
 
 //console.log(a); //300 fetching global variable
 
@@ -32,7 +32,7 @@ function one()
 
     }
     //console.log(website); //Error : this wont be working here as it is of child scope
-    two()
+    //two()  //no output
 }
 one()
 //So far the output was simply Adarsh
@@ -40,7 +40,7 @@ one()
 if(true)
     {
         const username = "adarsh"
-        if(username === "adarsh")
+        if(username === "adarsh")    //means that the values must be of the same type and have the same value in order for the comparison to return true.
             {
                 const website = " youtube"
                 console.log(username + website)
@@ -65,8 +65,12 @@ const addTwo = function (num)   // a function which is also called expression , 
     return num + 2
 }
 
-console.log(addTwo(5)); /*7 pr agr expression type function definition hai ( variable me store hoke function ka definition) 
+console.log(addTwo(5)); /*7 pr agr 'expression type function definition' hai ( variable me store hoke function ka definition) 
   to definition ke upr agr call krenge to error aayega */
+
+
+  //basic definition of function ke upr agr uska call hai to ---> execute
+  //expression type definition ke upr agr uska call hai to -->error , neeche hi krna hoga
 
 
 
