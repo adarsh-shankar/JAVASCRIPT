@@ -1,54 +1,62 @@
-// for
+// // for
 
-for (let index = 0; index < 10; index++) {
-    const element = index;
-    console.log(element);
+// for (let index = 0; index < 10; index++) {
+//     const element = index;
+//     console.log(element);
     
-}
-for (let i = 0; i <= 10; i++) {
-    const element = i;
-    if (element == 5) {
-        //console.log("5 is best number");
-    }
-    //console.log(element);
+// }
+// for (let i = 0; i <= 10; i++) {
+//     const element = i;
+//     if (element == 5) 
+//     {
+//         //console.log("5 is best number");
+//     }
+//     //console.log(element);
     
-}
+// }
 
-// console.log(element);
+// // console.log(element);
 
-for (let i = 1; i <= 10; i++) {
-    //console.log(`Outer loop value: ${i}`);
-   for (let j = 1; j <= 10; j++) {
-    //console.log(`Inner loop value ${j} and inner loop ${i}`);
-    //console.log(i + '*' + j + ' = ' + i*j );
-   }
+// for (let i = 1; i <= 10; i++) {
+//     //console.log(`Outer loop value: ${i}`);
+//    for (let j = 1; j <= 10; j++) {
+//     //console.log(`Inner loop value ${j} and inner loop ${i}`);
+//     //console.log(i + '*' + j + ' = ' + i*j );
+//    }
     
-}
+// }
 let myArray = ["flash", "batman", "superman"]
-//console.log(myArray.length);
+console.log(myArray.length);
 for (let index = 0; index < myArray.length; index++) {
-    const element = myArray[index];
-    //console.log(element);
+    //const element = myArray[index];
+    console.log(myArray[index]);
     
 }
 
 
-// break and continue
+// // break and continue
 
-for (let index = 1; index <= 20; index++) {
-    if (index == 5) {
-        console.log(`Detected 5`);
-        break
-    }
-   console.log(`Value of i is ${index}`);
+// for (let index = 1; index <= 20; index++) {
+//     if (index == 5) {
+//         console.log(`Detected 5`);
+//         break                            //nothing will print after 'Detected 5'
+//     }
+//    console.log(`Value of i is ${index}`);
     
-}
+// }
+// for (let index = 1; index <= 20; index++) {
+//     if (index == 5) {  index==5 will get ignored
+//         console.log(`Detected 5`);
+//         continue
+//     }
+//    console.log(`Value of i is ${index}`);
+// }
 
-for (let index = 1; index <= 20; index++) {
-    if (index == 5) {
-        console.log(`Detected 5`);
-        continue
-    }
-   console.log(`Value of i is ${index}`);
-    
-}
+// for(let i=0 ; i<3 ; i++){
+//     for(let j=0 ; j<3 ; j++){
+//         process.stdout.write(j);
+//     }
+//     process.stdout.write("\\n");
+// }
+
+// process.stdout.write(5);
