@@ -1,11 +1,49 @@
-const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//reduce
 
-//const newNums = myNumers.map( (num) => { return num + 10})
-//const newNums = myNumers.map((num) => num*10).map()
+const array1 = [1, 2, 3, 4];
 
-const newNums = myNumers
-                .map((num) => num * 10 )//10,20,30,40,50,60,70,80,90,100
-                .map( (num) => num + 1)//11,21,31,41,51,61,71,81,91,101
-                .filter( (num) => num >= 40)//41,51,61,71,81,91,101
 
-console.log(newNums);//41,51,61,71,81,91,101
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);  //accumulator is just a empty variable which first assign with initial value and then kept assigning the result after operation performed
+
+console.log(sumWithInitial);
+// Expected output: 10
+
+
+const myNums = [1, 2, 3]
+
+const myTotal = myNums.reduce(function (acc, currval) {
+    console.log(`acc: ${acc} and currval: ${currval}`);
+    return acc + currval
+}, 0)
+
+const myTotal1 = myNums.reduce( (acc, curr) => acc+curr, 0)
+
+console.log(myTotal);//6
+
+
+const shoppingCart = [  //array of objects
+    {
+        itemName: "js course",
+        price: 2999
+    },
+    {
+        itemName: "py course",
+        price: 999
+    },
+    {
+        itemName: "mobile dev course",
+        price: 5999
+    },
+    {
+        itemName: "data science course",
+        price: 12999
+    },
+]
+
+const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+
+console.log(priceToPay);
