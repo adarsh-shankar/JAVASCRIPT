@@ -1,0 +1,48 @@
+<!--
+    //relations 
+    //parents - child relations , vice versa
+    //child - child and parents to child
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div> <!-- day is child of the class parent-->
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent'); //selected one class which is of name parent 
+    console.log(parent);// display all the content of parent class including comments all respective subtags
+    console.log(parent.children); //HTMLCoolection(4) , and details of the all children class
+     console.log(parent.children[1].innerHTML); //Tuesday as it behaves like array , i can access the particular elements
+    // to print this 1) either we can convert it to array 
+    //2) use simple for loop to print the innerHTML of all the children class(day)
+    for (let i = 0; i < parent.children.length; i++) {
+         console.log(parent.children[i].innerHTML);
+        
+     } // it will print in this way
+     //monday
+     //tueday
+     //wednesday
+     //thursday
+     parent.children[1].style.color = "orange" // can change anyof the child class color
+    //  console.log(parent.firstElementChild.innerHTML); //<div class="day>Monday</div>" // selects first element child
+    //  console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);                      //div.day
+    // console.log(dayOne.parentElement);        //div.parent
+    // console.log(dayOne.nextElementSibling);   //div.day
+    console.log("NODES: ", parent.childNodes);   //tree structure of complete child nodes of parent node
+</script>
+</html>
