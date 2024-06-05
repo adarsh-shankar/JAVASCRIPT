@@ -1,0 +1,25 @@
+<!-- created a div through DOM and styled it providiing it its properties and the appended it in main file-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+</body>
+<script>
+    const div = document.createElement('div') //created a div in html
+    console.log(div); //<div></div> empty div
+    div.className = "main" //gave the class name as main
+    div.id = Math.round(Math.random() * 10 + 1) //assigned a random ID in between 1 and 11
+    div.setAttribute("title", "generated title")  //when hovered over the box of div , it says as "generated title" , have set the 
+    div.style.backgroundColor ="green" // gave the color as green
+    div.style.padding = "12px" // gave the padding as 12 px
+    //div.innerHTML = "Chai aur code "    // you can write somthing in div by .innerHTML= " chai aur code "
+    const addTesct = document.createTextNode("Chai aur code")   // the second way to write something 
+    div.appendChild(addTesct) 
+    //both of the upper options are good to go with , you can opt anyone 
+    document.body.appendChild(div)  //The div element is appended to the <body> of the document, making it visible on the webpage.
+</script>
+</html>
