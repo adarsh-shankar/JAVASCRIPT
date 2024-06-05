@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style ="background-color: #212121; color : white">
+    <ul class="language">
+        <li> JavaScipt </li>
+    </ul>
+    
+</body>
+<!-- Here we had an unorderd list which has one element as listed as "javaScript"  & 
+    through js we are going to learn how to add another list items-->
+<script>   
+    function addLanguage(langName){                  //making a function name addLAnguage which can take an arguments
+       const li =  document.createElement('li');     //creating an element by create element('li') and assigning it into li  
+       li.innerHTML = `${langName}`            //writing into li jo arguments me se aaya the 
+       document.querySelector('.language').
+       appendChild(li) // appending it into the .language class 
+    }
+    addLanguage("python") // creating another element as python
+    addLanguage("typescript") // ceating another element as typescript
+    // this is not optimised way of creating elements and appending them , because here we have to traverse the whole 
+    // tree like structure of list elements and then we are appending the further list items 
+    // to make this in optimised way
+
+    function addOPtiLanguage(langName){
+        const li = document.createElement('li');
+        const addText = document.createTextNode(langName)
+        li.appendChild(addText)
+        //or we can do both of the up line in a single line to save one variable as 
+        //li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOPtiLanguage('Golang')
+
+    //edit : 1st way
+
+    const secondLang = document.querySelector("li:nth-child(2)")   //this will select the 2nd list of ul
+    // secondLang.innerHTML= "MOJO"  //it will work , but not optimised  as it wil go by traversing  
+    //edit : 2nd way optimised one
+    const newli =  document.createElement('li')
+    newli.textContent = "mojo"
+    secondLang.replaceWith(newli) 
+    
+    //edit : 3rd way by outer html
+    
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'   //outer html , we have to write the whole html including tags and content 
+
+    //remove
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
