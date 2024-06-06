@@ -1,4 +1,4 @@
-//for each
+//for each works in array , array of objects
 
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
